@@ -1,0 +1,4 @@
+#!/usr/sbin/dyalogscript
+⎕IO←0
+h←'Hello World'
+⎕←h
