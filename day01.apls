@@ -1,4 +1,5 @@
 #!/usr/sbin/dyalogscript
+⎕IO ← 0
 
 ⍝ Day 1 Part 1
 
@@ -6,3 +7,8 @@ file ← ⊃⎕NGET'day01.txt'1
 ⍝file ← '3   4' '4   3' '2   5' '1   3' '3   9' '3   3'
 
 ⎕ ← +⌿|⊃-⌿{⍵[⍋⍵]}¨↓⍉↑⍎¨file
+
+⍝ Day 1 Part 2
+
+z ← ↑⍎¨file
+⎕ ← +⌿{⍵×+⌿⍵=z[;1]}¨z[;0]
